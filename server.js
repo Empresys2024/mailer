@@ -20,13 +20,12 @@ res.sendfile('index.html');
 });
 
 var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
+    service: "Outlook", // Cambia "gmail" a "Outlook"
     auth: {
-        user: process.env.GMAIL,
-        pass: process.env.KEY
+      user: "facturaciongallitosmananeros@outlook.com", // Cambia a tu dirección de correo
+      pass: "David456" // Cambia a tu contraseña
     }
-});
+  });
 
 app.get('/send',function(req,res){
     var mailOptions={
